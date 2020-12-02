@@ -1,6 +1,8 @@
 const request = require ('request');
+const myArgs = process.argv.slice(2);
+
 const url = 'https://api.thecatapi.com/v1/breeds/search?name=';
-const breed = 'Siberian';
+const breed = myArgs[0];;
 const breedFetcher = function (url, breed) {
   request(url+breed,(error, response, body) => {
     if (error) {
