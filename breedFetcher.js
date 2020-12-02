@@ -9,7 +9,8 @@ const breedFetcher = function (url, breed) {
     }
     console.log(typeof body);
     const breedCat = JSON.parse(body);
-    console.log(breedCat);
+    console.log(typeof breedCat);
+    console.log(breedCat[0].description);
   });
 }
 breedFetcher (url, breed);
